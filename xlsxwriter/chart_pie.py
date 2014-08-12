@@ -32,6 +32,7 @@ class ChartPie(chart.Chart):
             options = {}
 
         self.vary_data_color = 1
+        self.orientation = options.get('orientation', 0)
 
     ###########################################################################
     #
@@ -190,6 +191,6 @@ class ChartPie(chart.Chart):
 
     def _write_first_slice_ang(self):
         # Write the <c:firstSliceAng> element.
-        attributes = [('val', 0)]
+        attributes = [('val', self.orientation)]
 
         self._xml_empty_tag('c:firstSliceAng', attributes)
