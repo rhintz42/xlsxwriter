@@ -26,7 +26,7 @@ class ChartRadar(chart.Chart):
         Constructor.
 
         """
-        super(ChartRadar, self).__init__()
+        super(ChartRadar, self).__init__(options=options)
 
         if options is None:
             options = {}
@@ -81,7 +81,8 @@ class ChartRadar(chart.Chart):
             self._write_ser(data)
 
         # Write the c:axId elements
-        self._write_axis_ids(args)
+        # THIS IS WHAT DRAWS THE LINES
+        #self._write_axis_ids(args)
 
         self._xml_end_tag('c:radarChart')
 

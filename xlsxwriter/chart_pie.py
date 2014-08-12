@@ -26,13 +26,12 @@ class ChartPie(chart.Chart):
         Constructor.
 
         """
-        super(ChartPie, self).__init__()
+        super(ChartPie, self).__init__(options=options)
 
         if options is None:
             options = {}
 
         self.vary_data_color = 1
-        self.orientation = options.get('orientation', 0)
 
     ###########################################################################
     #
