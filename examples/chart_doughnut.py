@@ -1,10 +1,10 @@
 #######################################################################
 #
-# An example of creating Excel Pie charts with Python and XlsxWriter.
+# An example of creating Excel Doughnut charts with Python and XlsxWriter.
 #
 # The demo also shows how to set segment colours. It is possible to
 # define chart colors for most types of XlsxWriter charts
-# via the add_series() method. However, Pie charts are a special case
+# via the add_series() method. However, Doughnut charts are a special case
 # since each segment is represented as a point so it is necessary to
 # assign formatting to each point in the series.
 #
@@ -52,10 +52,10 @@ worksheet.insert_chart('C2', chart1, {'x_offset': 25, 'y_offset': 10})
 
 #######################################################################
 #
-# Create a Pie chart with user defined segment colors.
+# Create a Doughnut chart with user defined segment colors.
 #
 
-# Create an example Pie chart like above.
+# Create an example Doughnut chart like above.
 chart2 = workbook.add_chart({'type': 'doughnut'})
 
 # Configure the series and add user defined segment colours.
